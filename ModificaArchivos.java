@@ -18,7 +18,7 @@ public class ModificaArchivos {
         // Crea el archivo de inventario pidiendo registros al usuario
     private static void crearArchivoInventario(Scanner sc, String rutaArchivo) {
         System.out.println("\n=== CREACIÓN DEL INVENTARIO ===");
-        System.out.println("Se guardará en este formato: Producto,Stock,Precio");
+        System.out.println("Se guardará en este formato: Producto, Stock, Precio");
         System.out.println("Escribe 'FIN' como producto para terminar.\n");
 
         // try-with-resources asegura cierre del archivo
@@ -32,16 +32,16 @@ public class ModificaArchivos {
             bw.newLine();
 
             while (true) {
-                System.out.print("Escriba un Producto (o FIN para terminar): ");
+                System.out.print("Escriba un producto (o FIN para terminar): ");
                 //.trim() elimina los espacios en blanco antes y después
                 String producto = sc.nextLine().trim();
                 if (producto.equalsIgnoreCase("FIN")) break;
 
-                System.out.print("Escriba el stock ");
+                System.out.print("Escriba el stock: ");
                 String stockStr = sc.nextLine().trim();
                 int stock = Integer.parseInt(stockStr);        
                 
-                System.out.print("Escriba el precio ");
+                System.out.print("Escriba el precio: ");
                 String precioStr = sc.nextLine().trim();
                 double precio = Double.parseDouble(precioStr);
                 
@@ -60,7 +60,7 @@ public class ModificaArchivos {
         }
         
          catch (IOException ex) {
-            System.out.println("Error creando el archivo");
+            System.out.println("Error creando el archivo: ");
             ex.printStackTrace();
         }
     }
@@ -116,7 +116,7 @@ public class ModificaArchivos {
         }
         
          catch (IOException ex) {
-            System.out.println("Error creando el archivo");
+            System.out.println("Error creando el archivo: ");
             ex.printStackTrace();
         }
 
@@ -167,7 +167,7 @@ public class ModificaArchivos {
                             modificarArchivoInventario(rutaArchivo);
                             System.out.println("Archivo modificado");
                         } else {
-                            System.out.println("No se modifca el archivo");
+                            System.out.println("No se modifica el archivo");
                         }
                     }
                     case 3 -> System.out.println("\n--- Contenido final del inventario ---");
