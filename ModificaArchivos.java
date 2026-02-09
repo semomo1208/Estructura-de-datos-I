@@ -6,7 +6,7 @@ package com.mycompany.modificaarchivos;
 
 /**
  *
- * @author mrgamarra
+ * @author semomo1208
  */
 
 import java.io.*;
