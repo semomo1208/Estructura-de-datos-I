@@ -87,8 +87,8 @@ public class ModificaArchivos {
             while ((linea = br.readLine()) != null) {
 
 
-                // Parseo del CSV: Producto,Stock,Precio
-                // (Para ejercicios introductorios, split está bien; en casos reales usarías un parser CSV)
+                // Parseo del .txt: Producto, Stock, Precio
+                // (Para ejercicios introductorios, split con este tipo de archivo está bien; en casos reales usarías un archivo y parser CSV)
                 String[] partes = linea.split("\t");
                 if (partes.length != 3) {
                     // Si una línea no tiene el formato esperado, se copia igual (o podrías reportarla)
